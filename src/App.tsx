@@ -83,7 +83,7 @@ function App() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto relative"
           >
-            {/* Decorative Magpie SVG */}
+            {/* Decorative Magpie SVG
             <motion.svg
               className="absolute -top-20 right-0 w-32 h-32 md:w-48 md:h-48 text-purple-400 opacity-50"
               viewBox="0 0 100 100"
@@ -104,7 +104,7 @@ function App() {
                 fill="none"
                 variants={magpiePathVariants}
               />
-            </motion.svg>
+            </motion.svg> */}
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -113,7 +113,7 @@ function App() {
               className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500 text-center md:text-left relative"
             >
               Transform Your Business with AI-Powered Solutions
-              <motion.span
+              {/* <motion.span
                 className="absolute -left-4 -top-4 w-2 h-2 bg-purple-400 rounded-full"
                 animate={{
                   scale: [1, 1.5, 1],
@@ -124,7 +124,7 @@ function App() {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-              />
+              /> */}
             </motion.h1>
 
             <motion.p
@@ -152,6 +152,14 @@ function App() {
                 />
               </motion.button>
             </div>
+
+
+
+
+
+
+
+
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-16">
               {[

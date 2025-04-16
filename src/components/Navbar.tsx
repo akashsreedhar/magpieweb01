@@ -31,8 +31,8 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 20
-      }
+        damping: 20,
+      },
     },
     closed: {
       opacity: 0,
@@ -40,9 +40,22 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
       transition: {
         type: "spring",
         stiffness: 300,
-        damping: 30
-      }
-    }
+        damping: 30,
+      },
+    },
+  };
+
+  // Animation path variants for the flowing lines
+  const magpiePathVariants = {
+    hidden: { pathLength: 0, opacity: 0 },
+    visible: {
+      pathLength: 1,
+      opacity: 1,
+      transition: {
+        pathLength: { duration: 2, ease: "easeInOut" },
+        opacity: { duration: 0.5 },
+      },
+    },
   };
 
   return (
@@ -50,19 +63,45 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/80 backdrop-blur-md py-4' : 'bg-transparent py-6'
-      }`}
+        isScrolled ? 'bg-black/80 backdrop-blur-md py-2' : 'bg-transparent py-3'
+      }`} // Reduced padding (py-2 and py-3)
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500"
-          >
-            Magpie Web
-          </motion.div>
+          <div className="flex items-center space-x-2"> {/* Reduced spacing */}
+            {/* Logo Text */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500"
+            >
+              Magpie Web
+            </motion.div>
+
+            {/* Flowing, Interconnected Lines Animation */}
+            <motion.svg
+              className="w-16 h-16 text-purple-400 -ml-4" // Increased size to w-24 h-24 and added -ml-4 for closer positioning
+              viewBox="0 0 100 100"
+              initial="hidden"
+              animate="visible"
+            >
+              <motion.path
+                d="M20,50 Q35,20 50,50 T80,50"
+                stroke="currentColor"
+                strokeWidth="2"
+                fill="none"
+                variants={magpiePathVariants}
+              />
+              <motion.path
+                d="M30,40 Q45,60 60,40"
+                stroke="currentColor"
+                strokeWidth="2"
+                fill="none"
+                variants={magpiePathVariants}
+              />
+            </motion.svg>
+          </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
