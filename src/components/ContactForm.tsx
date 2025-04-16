@@ -11,10 +11,42 @@ const ContactForm: React.FC = () => {
     message: '',
   });
 
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Implement form submission logic here
-    console.log('Form submitted:', formState);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mblgedao', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formState),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormState({
+          name: '',
+          email: '',
+          phone: '',
+          organization: '',
+          preferredTime: '',
+          message: '',
+        });
+
+        // Reload the page after 3 seconds
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
+      } else {
+        alert('Oops! Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting the form:', error);
+      alert('An error occurred. Please try again later.');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -23,6 +55,19 @@ const ContactForm: React.FC = () => {
       [e.target.name]: e.target.value,
     });
   };
+
+  if (isSubmitted) {
+    return (
+      <div className="text-center py-20">
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          Submitted!
+        </h2>
+        <p className="text-lg text-gray-300">
+          Talk to you soon ...!
+        </p>
+      </div>
+    );
+  }
 
   return (
     <motion.form
