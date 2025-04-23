@@ -191,16 +191,16 @@ function App() {
       </Section>
 
       {/* About Section */}
-<Section ref={aboutRef} className="py-20 bg-gradient-to-b from-gray-900 to-black">
-  <div className="container mx-auto px-6 md:px-12">
-    <h2 className="text-4xl md:text-5xl font-bold mb-16 pb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
+      <Section ref={aboutRef} className="py-16 bg-gradient-to-b from-gray-900 to-black">
+  <div className="container mx-auto sm:px-4 md:px-6">
+    <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
       About Magpie
     </h2>
-    <div className="grid md:grid-cols-2 gap-12">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {/* Left Column */}
-      <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 p-8 rounded-xl shadow-xl relative flex flex-col justify-between">
+      <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 p-6 md:p-8 rounded-xl shadow-xl flex flex-col justify-between">
         <div>
-          <p className="text-lg md:text-xl leading-relaxed text-gray-300 text-justify">
+          <p className="text-base md:text-lg leading-relaxed text-gray-300 text-justify">
             <span className="text-purple-400 font-semibold">Big Dreams. Bright Ideas. Local Roots. Global Reach.</span>
             <br /><br />
             Magpie Web was sparked in a vibrant hometown where ambition meets creativity. What began in a small room with a big dream — <span className="text-blue-400 font-semibold">helping local businesses shine online</span> — has now grown into a trusted digital partner for clients across the world.
@@ -213,7 +213,7 @@ function App() {
             <br /><br />
             Let’s build something meaningful, something lasting — <span className="text-blue-400 font-semibold">together.</span>
           </p>
-          <div className="grid grid-cols-2 gap-6 mt-8">
+          <div className="grid grid-cols-2 gap-4 mt-6">
             {[
               { label: 'Established', value: '2024' },
               { label: 'Team', value: '10+ Experts' },
@@ -228,14 +228,14 @@ function App() {
                 className="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-300"
               >
                 <p className="text-sm text-gray-400">{stat.label}</p>
-                <p className="text-xl font-semibold text-purple-400">{stat.value}</p>
+                <p className="text-lg md:text-xl font-semibold text-purple-400">{stat.value}</p>
               </motion.div>
             ))}
           </div>
         </div>
         {/* Flowing, Interconnected Lines Animation */}
         <motion.svg
-          className=" w-[500px] h-96 mt-8 text-purple-400 mx-auto"
+          className="w-full h-64 mt-8 text-purple-400 mx-auto"
           viewBox="0 0 100 100"
           initial="hidden"
           animate="visible"
@@ -258,22 +258,22 @@ function App() {
       </div>
 
       {/* Right Column */}
-      <div className="space-y-8">
-        <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-purple-500/20 transition-shadow duration-300">
-          <h3 className="text-2xl font-semibold mb-4 text-purple-400">Our Mission</h3>
-          <p className="text-gray-300">
+      <div className="space-y-6">
+        <div className="bg-gray-800 p-4 md:p-6 rounded-xl shadow-lg hover:shadow-purple-500/20 transition-shadow duration-300">
+          <h3 className="text-xl md:text-2xl font-semibold mb-4 text-purple-400">Our Mission</h3>
+          <p className="text-sm md:text-base text-gray-300">
             "To help businesses — big or small — grow smarter through meaningful digital solutions. By blending creativity with AI, we aim to make technology simple, affordable, and impactful for every brand that dares to dream big."
           </p>
         </div>
-        <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-purple-500/20 transition-shadow duration-300">
-          <h3 className="text-2xl font-semibold mb-4 text-purple-400">Our Vision</h3>
-          <p className="text-gray-300">
+        <div className="bg-gray-800 p-4 md:p-6 rounded-xl shadow-lg hover:shadow-purple-500/20 transition-shadow duration-300">
+          <h3 className="text-xl md:text-2xl font-semibold mb-4 text-purple-400">Our Vision</h3>
+          <p className="text-sm md:text-base text-gray-300">
             "To become the go-to digital partner for brands that dream big — turning everyday ideas into extraordinary success stories. From local markets to global platforms, we’re here to make your business shine everywhere it matters."
           </p>
         </div>
-        <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-purple-500/20 transition-shadow duration-300">
-          <h3 className="text-2xl font-semibold mb-4 text-purple-400">Core Values</h3>
-          <ul className="space-y-4 text-gray-300 list-disc list-inside">
+        <div className="bg-gray-800 p-4 md:p-6 rounded-xl shadow-lg hover:shadow-purple-500/20 transition-shadow duration-300">
+          <h3 className="text-xl md:text-2xl font-semibold mb-4 text-purple-400">Core Values</h3>
+          <ul className="space-y-2 text-sm md:text-base text-gray-300 list-disc list-inside">
             <li>
               <span className="text-blue-400 font-semibold">Creativity with Purpose</span> – Every design, strategy, and solution is built to solve real problems and spark growth.
             </li>
@@ -288,9 +288,9 @@ function App() {
             </li>
           </ul>
         </div>
-        <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-purple-500/20 transition-shadow duration-300">
-          <h3 className="text-2xl font-semibold mb-4 text-purple-400">What Sets Us Apart</h3>
-          <ul className="space-y-4 text-gray-300 list-disc list-inside">
+        <div className="bg-gray-800 p-4 md:p-6 rounded-xl shadow-lg hover:shadow-purple-500/20 transition-shadow duration-300">
+          <h3 className="text-xl md:text-2xl font-semibold mb-4 text-purple-400">What Sets Us Apart</h3>
+          <ul className="space-y-2 text-sm md:text-base text-gray-300 list-disc list-inside">
             <li>
               <span className="text-blue-400 font-semibold">Solutions That Fit You</span> – We don’t believe in one-size-fits-all. Everything we build is tailored to your goals, your audience, and your budget.
             </li>
