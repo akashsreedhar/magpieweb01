@@ -112,7 +112,7 @@ function App() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500 text-center md:text-left relative"
             >
-              Transform Your Business with AI-Powered Solutions
+              Boost Your Business with Affordable AI-Powered Solutions
               {/* <motion.span
                 className="absolute -left-4 -top-4 w-2 h-2 bg-purple-400 rounded-full"
                 animate={{
@@ -133,7 +133,9 @@ function App() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-lg md:text-xl mb-8 text-gray-300 text-center md:text-left"
             >
-              Harness the power of artificial intelligence to drive innovation, efficiency, and growth in your business.
+              At Magpie Web, we help businesses grow with beautiful websites, smart tools, and powerful strategies — all designed to deliver big results  WITHOUT BIG COSTS.<br/>
+              <br/>
+              Using the latest in AI, we make it easier and more affordable to stand out, connect, and grow
             </motion.p>
 
             <div className="text-center md:text-left">
@@ -189,51 +191,128 @@ function App() {
       </Section>
 
       {/* About Section */}
-      <Section ref={aboutRef} className="py-20 bg-gray-900">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
-            About Magpie
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-            <div>
-              <p className="text-lg mb-6 text-gray-300">
-                Founded with a vision to revolutionize digital solutions, Magpie Web combines artificial intelligence with human expertise to deliver exceptional results.
-              </p>
-              <div className="grid grid-cols-2 gap-4 md:gap-6">
-                {[
-                  { label: 'Established', value: '2024' },
-                  { label: 'Team', value: '10+ Experts' },
-                  { label: 'Reach', value: 'Global' },
-                  { label: 'Growth', value: 'Consistent' },
-                ].map((stat, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 * index }}
-                    className="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-300"
-                  >
-                    <p className="text-sm text-gray-400">{stat.label}</p>
-                    <p className="text-xl font-semibold text-purple-400">{stat.value}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold mb-4 text-purple-400">Our Mission</h3>
-              <p className="mb-6 text-gray-300">
-                To empower businesses with cutting-edge AI solutions that drive growth and innovation.
-              </p>
-              <h3 className="text-2xl font-semibold mb-4 text-purple-400">Our Vision</h3>
-              <p className="mb-6 text-gray-300">
-                To be the global leader in AI-powered digital transformation solutions.
-              </p>
-              <h3 className="text-2xl font-semibold mb-4 text-purple-400">Core Values</h3>
-              <p className="text-gray-300">Innovation, Integrity, and Excellence.</p>
-            </div>
+<Section ref={aboutRef} className="py-20 bg-gradient-to-b from-gray-900 to-black">
+  <div className="container mx-auto px-6 md:px-12">
+    <h2 className="text-4xl md:text-5xl font-bold mb-16 pb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
+      About Magpie
+    </h2>
+    <div className="grid md:grid-cols-2 gap-12">
+      {/* Left Column */}
+      <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 p-8 rounded-xl shadow-xl relative flex flex-col justify-between">
+        <div>
+          <p className="text-lg md:text-xl leading-relaxed text-gray-300 text-justify">
+            <span className="text-purple-400 font-semibold">Big Dreams. Bright Ideas. Local Roots. Global Reach.</span>
+            <br /><br />
+            Magpie Web was sparked in a vibrant hometown where ambition meets creativity. What began in a small room with a big dream — <span className="text-blue-400 font-semibold">helping local businesses shine online</span> — has now grown into a trusted digital partner for clients across the world.
+            <br /><br />
+            With every website we craft and every solution we build, we blend <span className="text-purple-400 font-semibold">human creativity</span> with the <span className="text-blue-400 font-semibold">latest AI innovations</span> — delivering real results without the heavy price tag.
+            <br /><br />
+            We’ve earned the trust of both domestic brands and international names by staying true to what matters most: <span className="text-purple-400 font-semibold">honest work, powerful design,</span> and <span className="text-blue-400 font-semibold">solutions that just make sense.</span>
+            <br /><br />
+            <span className="text-purple-400 font-semibold">We believe great ideas can come from anywhere</span> — and with the right support, they can go everywhere.
+            <br /><br />
+            Let’s build something meaningful, something lasting — <span className="text-blue-400 font-semibold">together.</span>
+          </p>
+          <div className="grid grid-cols-2 gap-6 mt-8">
+            {[
+              { label: 'Established', value: '2024' },
+              { label: 'Team', value: '10+ Experts' },
+              { label: 'Reach', value: 'Global' },
+              { label: 'Growth', value: 'Consistent' },
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 * index }}
+                className="p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-300"
+              >
+                <p className="text-sm text-gray-400">{stat.label}</p>
+                <p className="text-xl font-semibold text-purple-400">{stat.value}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
-      </Section>
+        {/* Flowing, Interconnected Lines Animation */}
+        <motion.svg
+          className=" w-[500px] h-96 mt-8 text-purple-400 mx-auto"
+          viewBox="0 0 100 100"
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.path
+            d="M20,50 Q35,20 50,50 T80,50"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+            variants={magpiePathVariants}
+          />
+          <motion.path
+            d="M30,40 Q45,60 60,40"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+            variants={magpiePathVariants}
+          />
+        </motion.svg>
+      </div>
+
+      {/* Right Column */}
+      <div className="space-y-8">
+        <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-purple-500/20 transition-shadow duration-300">
+          <h3 className="text-2xl font-semibold mb-4 text-purple-400">Our Mission</h3>
+          <p className="text-gray-300">
+            "To help businesses — big or small — grow smarter through meaningful digital solutions. By blending creativity with AI, we aim to make technology simple, affordable, and impactful for every brand that dares to dream big."
+          </p>
+        </div>
+        <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-purple-500/20 transition-shadow duration-300">
+          <h3 className="text-2xl font-semibold mb-4 text-purple-400">Our Vision</h3>
+          <p className="text-gray-300">
+            "To become the go-to digital partner for brands that dream big — turning everyday ideas into extraordinary success stories. From local markets to global platforms, we’re here to make your business shine everywhere it matters."
+          </p>
+        </div>
+        <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-purple-500/20 transition-shadow duration-300">
+          <h3 className="text-2xl font-semibold mb-4 text-purple-400">Core Values</h3>
+          <ul className="space-y-4 text-gray-300 list-disc list-inside">
+            <li>
+              <span className="text-blue-400 font-semibold">Creativity with Purpose</span> – Every design, strategy, and solution is built to solve real problems and spark growth.
+            </li>
+            <li>
+              <span className="text-blue-400 font-semibold">Trust in Every Step</span> – We value honest relationships, clear communication, and long-term partnerships.
+            </li>
+            <li>
+              <span className="text-blue-400 font-semibold">Smart Innovation</span> – We use AI and technology to simplify your path to success — not complicate it.
+            </li>
+            <li>
+              <span className="text-blue-400 font-semibold">Growth Without Borders</span> – We believe great ideas deserve great reach — no matter your size or starting point.
+            </li>
+          </ul>
+        </div>
+        <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-purple-500/20 transition-shadow duration-300">
+          <h3 className="text-2xl font-semibold mb-4 text-purple-400">What Sets Us Apart</h3>
+          <ul className="space-y-4 text-gray-300 list-disc list-inside">
+            <li>
+              <span className="text-blue-400 font-semibold">Solutions That Fit You</span> – We don’t believe in one-size-fits-all. Everything we build is tailored to your goals, your audience, and your budget.
+            </li>
+            <li>
+              <span className="text-blue-400 font-semibold">Always Within Reach</span> – We work closely with our clients, offering real-time support and simple communication — no technical jargon, just real help when you need it.
+            </li>
+            <li>
+              <span className="text-blue-400 font-semibold">Results That Matter</span> – From your first website to full-scale digital growth, we focus on results you can see — better reach, better engagement, better business.
+            </li>
+            <li>
+              <span className="text-blue-400 font-semibold">Simple Language. Big Impact.</span> – We speak your language — literally and digitally. No complex tech talk, just clear solutions that work.
+            </li>
+            <li>
+              <span className="text-blue-400 font-semibold">AI That Works For You</span> – We use the power of AI to automate, enhance, and optimize your digital presence — saving time and cutting costs.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</Section>
+     
 
       {/* Services Section */}
       <Section ref={servicesRef} className="py-20 bg-black">
