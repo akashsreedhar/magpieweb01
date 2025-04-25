@@ -128,15 +128,14 @@ function App() {
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-lg md:text-xl mb-8 text-gray-300 text-center md:text-left"
-            >
-              At Magpie Web, we help businesses grow with beautiful websites, smart tools, and powerful strategies — all designed to deliver big results  WITHOUT BIG COSTS.<br/>
-              <br/>
-              Using the latest in AI, we make it easier and more affordable to stand out, connect, and grow
-            </motion.p>
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.4 }}
+  className="text-lg md:text-xl mb-8 text-gray-300 text-center md:text-left font-medium"
+>
+  <span className="text-purple-400 font-semibold">Born in Kerala, built for the world</span> — Magpie Web crafts stunning websites and smart digital solutions that help your business grow fast, stand out online, and reach more people — 
+  <br/><span className="text-blue-400 font-semibold"> All without breaking the bank.</span>
+</motion.p>
 
             <div className="text-center md:text-left">
               <motion.button
