@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Github, Twitter, Linkedin, Mail, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -56,19 +56,19 @@ const Footer: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <h4 className="text-white font-semibold mb-4">Connect With Us</h4>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
-                <Github className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
-                <Twitter className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
-                <Linkedin className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
-                <Mail className="w-6 h-6" />
-              </a>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-2">
+                <Mail className="w-6 h-6 text-gray-400" />
+                <a href="mailto:info@magpieweb.com" className="text-gray-400 hover:text-purple-400 transition-colors">
+                  info@magpieweb.com
+                </a>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Instagram className="w-6 h-6 text-gray-400" />
+                <a href="https://www.instagram.com/magpie.web?igsh=eWVwaHJ0NXZyYjVn" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors">
+                  Instagram
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>
