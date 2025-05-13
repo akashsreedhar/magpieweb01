@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Twitter, Linkedin, Mail, Instagram } from 'lucide-react';
+import { Github, Twitter, Linkedin, Mail, Instagram,Phone } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -69,6 +69,12 @@ const Footer: React.FC = () => {
                   Instagram
                 </a>
               </div>
+              <div className="flex items-center space-x-2">
+    <Phone className="w-6 h-6 text-gray-400" />
+    <a href="tel:+917306963417" className="text-gray-400 hover:text-purple-400 transition-colors">
+      +91 73069 63417
+    </a>
+  </div>
             </div>
           </motion.div>
         </div>
