@@ -1,11 +1,15 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import { Shield, Lightbulb, Users, Globe, Brain, Database, Lock, Cloud, Search, Code, LineChart, MessageSquare } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Section from './components/Section';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
+import SEO from './components/SEO';
+import FAQ from './components/FAQ';
+import { initializeAnalytics } from './utils/analytics';
+// import { injectStructuredData } from './utils/seo';
+// import { measureWebVitals, preloadCriticalResources } from './utils/performance';
 
 function App() {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -30,8 +34,28 @@ function App() {
     }
   };
 
+  // Initialize analytics and basic performance monitoring
+  useEffect(() => {
+    // Initialize Google Analytics
+    initializeAnalytics();
+    
+    // Basic error tracking
+    window.addEventListener('error', (event) => {
+      console.error('Global error:', event.error);
+    });
+
+    // Basic performance tracking
+    if ('performance' in window) {
+      window.addEventListener('load', () => {
+        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+      });
+    }
+  }, []);
+
   return (
     <div className="bg-black text-white min-h-screen">
+      <SEO />
       <Navbar
         onNavigate={{
           about: () => scrollToSection(aboutRef),
@@ -408,7 +432,7 @@ function App() {
       </Section>
 
       {/* Contact Section */}
-      <Section ref={contactRef} className="py-20 bg-black">
+      <Section ref={contactRef} className="py-20 bg-black" data-section="contact">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
             Schedule a Consultation
@@ -418,6 +442,9 @@ function App() {
           </div>
         </div>
       </Section>
+
+      {/* FAQ Section */}
+      <FAQ />
 
       <Footer />
     </div>

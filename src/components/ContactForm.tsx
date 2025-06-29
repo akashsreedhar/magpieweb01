@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { trackFormSubmission } from '../utils/analytics';
 
 const ContactForm: React.FC = () => {
   const [formState, setFormState] = useState({
@@ -26,6 +27,9 @@ const ContactForm: React.FC = () => {
       });
 
       if (response.ok) {
+        // Track successful form submission
+        trackFormSubmission('contact_consultation');
+        
         setIsSubmitted(true);
         setFormState({
           name: '',

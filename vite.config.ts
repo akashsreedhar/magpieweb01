@@ -11,5 +11,24 @@ export default defineConfig({
   publicDir: 'public',
   build: {
     copyPublicDir: true,
+    // Optimize bundle size for better performance
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          motion: ['framer-motion'],
+          icons: ['lucide-react'],
+        },
+      },
+    },
+    // Simplified minification
+    minify: 'esbuild',
+    target: 'esnext',
+  },
+  // Improve development server performance
+  server: {
+    hmr: {
+      overlay: false,
+    },
   },
 });
