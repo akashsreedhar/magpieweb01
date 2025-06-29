@@ -4,7 +4,7 @@ export const initializeAnalytics = () => {
   const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
   
   // Don't initialize in development or if no valid ID
-  if (GA_MEASUREMENT_ID === 'G-2KDGGXPZLH' || import.meta.env.DEV) {
+  if (GA_MEASUREMENT_ID === 'G-XXXXXXXXXX' || import.meta.env.DEV) {
     console.log('Analytics not initialized (development mode or missing ID)');
     return;
   }
