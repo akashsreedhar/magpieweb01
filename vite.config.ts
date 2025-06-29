@@ -7,4 +7,9 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  // Ensure static files like sitemap.xml are copied to build output
+  publicDir: 'public',
+  build: {
+    copyPublicDir: true,
+  },
 });
