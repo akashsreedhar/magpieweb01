@@ -137,29 +137,15 @@ function App() {
               className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500 text-center md:text-left relative"
             >
               Boost Your Business with Affordable AI-Powered Solutions
-              {/* <motion.span
-                className="absolute -left-4 -top-4 w-2 h-2 bg-purple-400 rounded-full"
-                animate={{
-                  scale: [1, 1.5, 1],
-                  opacity: [0.5, 1, 0.5],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              /> */}
             </motion.h1>
-
             <motion.p
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.4 }}
-  className="text-lg md:text-xl mb-8 text-gray-300 text-center md:text-left font-medium"
->
-  <span className="text-purple-400 font-semibold">Born in Kerala, built for the world</span> — Magpie Web crafts stunning websites and smart digital solutions that help your business grow fast, stand out online, and reach more people — 
-  <br/><span className="text-blue-400 font-semibold"> All without breaking the bank.</span>
-</motion.p>
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-lg md:text-xl mb-8 text-gray-300 text-center md:text-left font-medium"
+            >
+              Born in Kerala, built for the world — Magpie Web crafts stunning websites and smart digital solutions that help your business grow fast, stand out online, and reach more people — All without breaking the bank.
+            </motion.p>
 
             <div className="text-center md:text-left">
               <motion.button
@@ -177,14 +163,6 @@ function App() {
                 />
               </motion.button>
             </div>
-
-
-
-
-
-
-
-
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-16">
               {[
