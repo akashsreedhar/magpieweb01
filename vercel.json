@@ -7,14 +7,6 @@
         { "type": "host", "value": "www.magpieweb.com" }
       ],
       "permanent": true
-    },
-    {
-      "source": "/(.*)",
-      "destination": "https://magpieweb.com/:1",
-      "has": [
-        { "type": "host", "value": "magpieweb.com" }
-      ],
-      "statusCode": 308
     }
   ]
 }
