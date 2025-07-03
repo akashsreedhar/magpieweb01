@@ -3,7 +3,7 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap
-Sitemap: https://www.magpieweb.com/sitemap.xml
+Sitemap: https://magpieweb.com/sitemap.xml
 
 # Disallow specific directories (if any)
 # Disallow: /admin/

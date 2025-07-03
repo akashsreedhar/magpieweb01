@@ -5,7 +5,7 @@ export const generateStructuredData = () => {
     "@type": "Organization",
     "name": "Magpie Web",
     "description": "AI-powered digital solutions company based in Kerala, India",
-    "url": "https://www.magpieweb.com",
+    "url": "https://magpieweb.com",
     "logo": "https://res.cloudinary.com/duwyf99dl/image/upload/v1745598351/Magpie_Web_Fav_Icon-removebg-preview_nrrxw4.png",
     "foundingDate": "2024",
     "foundingLocation": {
@@ -57,7 +57,7 @@ export const generateStructuredData = () => {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Magpie Web",
-    "url": "https://www.magpieweb.com",
+    "url": "https://magpieweb.com",
     "description": "Born in Kerala, built for the world. Magpie Web crafts stunning websites and smart digital solutions.",
     "publisher": {
       "@type": "Organization",

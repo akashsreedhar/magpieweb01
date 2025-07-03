@@ -11,10 +11,10 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({
   title = "Magpie Web - AI-Powered Digital Solutions | Web Development Kerala",
-  description = "Born in Kerala, built for the world. Magpie Web crafts stunning websites and smart digital solutions that help your business grow fast, stand out online, and reach more people.",
+  description = "Boost Your Business with Affordable AI-Powered Solutions. Born in Kerala, built for the world — Magpie Web crafts stunning websites and smart digital solutions that help your business grow fast, stand out online, and reach more people — All without breaking the bank.",
   keywords = "magpie web, web development kerala, AI solutions, digital marketing, custom software development, cloud solutions, SEO optimization, IT consulting, kerala web designers",
   image = "https://res.cloudinary.com/duwyf99dl/image/upload/v1745598351/Magpie_Web_Fav_Icon-removebg-preview_nrrxw4.png",
-  url = "https://www.magpieweb.com/",
+  url = "https://magpieweb.com/",
   type = "website"
 }) => {
   useEffect(() => {
@@ -52,7 +52,7 @@ const SEO: React.FC<SEOProps> = ({
     updateMetaTag('twitter:image', image, true);
     updateMetaTag('twitter:url', url, true);
 
-    // Canonical link
+    // Canonical link (always use non-www, https)
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonical) {
       canonical = document.createElement('link');
