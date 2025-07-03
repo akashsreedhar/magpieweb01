@@ -14,8 +14,7 @@
       "has": [
         { "type": "host", "value": "magpieweb.com" }
       ],
-      "statusCode": 308,
-      "force": true
+      "statusCode": 308
     }
   ]
 }
