@@ -7,6 +7,15 @@
         { "type": "host", "value": "www.magpieweb.com" }
       ],
       "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "destination": "https://magpieweb.com/:path*",
+      "has": [
+        { "type": "host", "value": "magpieweb.com" },
+        { "type": "protocol", "value": "http" }
+      ],
+      "permanent": true
     }
   ]
 }
