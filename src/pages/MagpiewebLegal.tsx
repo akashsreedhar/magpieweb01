@@ -701,7 +701,7 @@ export default function MagpiewebLegal() {
                     <li className="text-gray-700 leading-relaxed text-sm sm:text-[15px] lg:text-base" {...props}>{children}</li>
                   ),
                   strong: ({ children, ...props }) => (
-                    <strong className="font-semibold text-gray-900" {...props}>{children}</strong>
+                    <strong className="font-semibold text-gray-900 text-sm sm:text-[15px] lg:text-base" {...props}>{children}</strong>
                   ),
                   a: ({ children, href, ...props }) => (
                     <a
