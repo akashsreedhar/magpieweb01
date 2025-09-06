@@ -193,10 +193,10 @@ We may update this Privacy Policy at any time. The "Last Updated" date will alwa
 
 For privacy concerns or general queries:
 
-**Magpieweb**
-Email: **[info@magpieweb.com](mailto:info@magpieweb.com)**
-Website: [www.magpieweb.com](https://www.magpieweb.com)
-phone :+91 73069 63417
+**Magpieweb**  
+📧 **Email:** [info@magpieweb.com](mailto:info@magpieweb.com)  
+🌐 **Website:** [www.magpieweb.com](https://www.magpieweb.com)  
+📞 **Phone:** [+91 73069 63417](tel:+917306963417)
 ---
 
 # 📜 Terms & Conditions – Magpieweb
@@ -319,10 +319,10 @@ We may modify these Terms at any time. Continued use of the Service after update
 
 For questions, complaints, or support:
 
-**Magpieweb**
-Email: **[info@magpieweb.com](mailto:info@magpieweb.com)**
-Website: [www.magpieweb.com](https://www.magpieweb.com)
-phone :+91 73069 63417
+**Magpieweb**  
+📧 **Email:** [info@magpieweb.com](mailto:info@magpieweb.com)  
+🌐 **Website:** [www.magpieweb.com](https://www.magpieweb.com)  
+📞 **Phone:** [+91 73069 63417](tel:+917306963417)
 ---`;
 
 interface TOCItem { id: string; title: string; level: number; }
