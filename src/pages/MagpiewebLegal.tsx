@@ -196,7 +196,6 @@ For privacy concerns or general queries:
 **Magpieweb**
 Email: **[info@magpieweb.com](mailto:info@magpieweb.com)**
 Website: [www.magpieweb.com](https://www.magpieweb.com)
-Address: \\[Your Office Address], Kerala, India
 
 ---
 
@@ -323,9 +322,14 @@ For questions, complaints, or support:
 **Magpieweb**
 Email: **[info@magpieweb.com](mailto:info@magpieweb.com)**
 Website: [www.magpieweb.com](https://www.magpieweb.com)
-Address: \\[Your Office Address], Kerala, India
-
----`;
+                <h2 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 sm:mb-4 flex items-center gap-2" aria-label="Table of Contents"><Sparkles className="w-4 h-4 text-purple-500" /><span>Table of Contents</span></h2>
+                <div className="mb-3 relative">
+                  <Search className="w-4 h-4 text-purple-400 absolute left-3 top-2.5" />
+                  <input
+                    id="toc-search"
+                    placeholder="Search sections (s)"
+                    value={tocQuery}
+                    onChange={e => setTocQuery(e.target.value)}---`;
 
 interface TOCItem { id: string; title: string; level: number; }
 
@@ -582,9 +586,9 @@ export default function MagpiewebLegal() {
         </div>
   </header>
 
-      <div className="w-full px-3 sm:px-4 lg:px-6 py-4 sm:py-8">
-        <div className="w-full mx-auto">
-          <div className="xl:flex xl:gap-8">
+      <div className="w-full px-3 sm:px-4 lg:px-6 py-4 sm:py-8 overflow-x-hidden">
+        <div className="w-full max-w-none mx-auto overflow-x-hidden">
+          <div className="xl:flex xl:gap-8 w-full">
           {/* Desktop TOC Sidebar */}
           <aside className={`hidden xl:block w-80 flex-shrink-0 transition ${focusMode ? 'opacity-0 pointer-events-none select-none' : 'opacity-100'}`}>
             <div className="sticky top-32">
@@ -764,11 +768,45 @@ export default function MagpiewebLegal() {
         @keyframes fadeIn { from { opacity:0; transform:translateY(-6px);} to { opacity:1; transform:translateY(0);} }
         @keyframes fadeOut { to { opacity:0; transform:translateY(-4px);} }
         
-        /* Force full width on mobile devices */
+        /* Critical mobile responsiveness fixes */
+        * {
+          box-sizing: border-box;
+        }
+        
+        /* Force full width on mobile devices and prevent horizontal overflow */
         @media (max-width: 1279px) {
-          body { overflow-x: hidden; }
-          #root { width: 100vw; max-width: 100vw; }
-          * { box-sizing: border-box; }
+          html, body { 
+            overflow-x: hidden; 
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+          }
+          #root { 
+            width: 100vw; 
+            max-width: 100vw; 
+            overflow-x: hidden;
+          }
+          * { 
+            box-sizing: border-box; 
+          }
+          /* Prevent any element from causing horizontal scroll */
+          .container, .w-full, .max-w-full {
+            max-width: 100% !important;
+            overflow-x: hidden;
+          }
+          /* Ensure main content uses full width on mobile */
+          main {
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+          /* Fix any potential layout issues */
+          .xl\\:flex {
+            display: block !important;
+          }
+          .xl\\:gap-8 {
+            gap: 0 !important;
+          }
         }
       `}</style>
     </div>
