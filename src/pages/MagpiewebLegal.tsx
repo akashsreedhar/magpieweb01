@@ -193,10 +193,11 @@ We may update this Privacy Policy at any time. The "Last Updated" date will alwa
 
 For privacy concerns or general queries:
 
-**Magpieweb**  
-📧 **Email:** [info@magpieweb.com](mailto:info@magpieweb.com)  
-🌐 **Website:** [www.magpieweb.com](https://www.magpieweb.com)  
-📞 **Phone:** [+91 73069 63417](tel:+917306963417)
+**Magpieweb**
+
+**Email:** [info@magpieweb.com](mailto:info@magpieweb.com)  
+**Website:** [www.magpieweb.com](https://www.magpieweb.com)  
+**Phone:** +91 73069 63417
 ---
 
 # 📜 Terms & Conditions – Magpieweb
@@ -319,10 +320,11 @@ We may modify these Terms at any time. Continued use of the Service after update
 
 For questions, complaints, or support:
 
-**Magpieweb**  
-📧 **Email:** [info@magpieweb.com](mailto:info@magpieweb.com)  
-🌐 **Website:** [www.magpieweb.com](https://www.magpieweb.com)  
-📞 **Phone:** [+91 73069 63417](tel:+917306963417)
+**Magpieweb**
+
+**Email:** [info@magpieweb.com](mailto:info@magpieweb.com)  
+**Website:** [www.magpieweb.com](https://www.magpieweb.com)  
+**Phone:** +91 73069 63417
 ---`;
 
 interface TOCItem { id: string; title: string; level: number; }
@@ -691,29 +693,70 @@ export default function MagpiewebLegal() {
                   h1: H1,
                   h2: H2,
                   h3: H3,
-                  p: ({ children, ...props }) => (
-                    <p className="mb-3 sm:mb-4 text-gray-700 leading-relaxed text-sm sm:text-[15px] lg:text-base print:leading-normal" {...props}>{children}</p>
-                  ),
+                  p: ({ children, ...props }) => {
+                    // Check if this paragraph contains contact information
+                    const isContactInfo = React.Children.toArray(children).some(child => {
+                      if (typeof child === 'string') {
+                        return child.includes('Email:') || child.includes('Website:') || child.includes('Phone:') || child.includes('Magpieweb');
+                      }
+                      if (React.isValidElement(child) && child.props.children) {
+                        const text = child.props.children.toString();
+                        return text.includes('info@magpieweb.com') || text.includes('www.magpieweb.com') || text.includes('+91 73069 63417') || text.includes('Email:') || text.includes('Website:') || text.includes('Phone:');
+                      }
+                      return false;
+                    });
+
+                    return (
+                      <p className={`mb-3 sm:mb-4 text-gray-700 leading-relaxed print:leading-normal ${
+                        isContactInfo 
+                          ? 'text-sm sm:text-sm lg:text-sm' 
+                          : 'text-sm sm:text-[15px] lg:text-base'
+                      }`} {...props}>{children}</p>
+                    );
+                  },
                   ul: ({ children, ...props }) => (
                     <ul className="mb-4 sm:mb-6 pl-4 sm:pl-5 lg:pl-6 space-y-1.5 sm:space-y-2 list-disc" {...props}>{children}</ul>
                   ),
                   li: ({ children, ...props }) => (
                     <li className="text-gray-700 leading-relaxed text-sm sm:text-[15px] lg:text-base" {...props}>{children}</li>
                   ),
-                  strong: ({ children, ...props }) => (
-                    <strong className="font-semibold text-gray-900 text-sm sm:text-[15px] lg:text-base" {...props}>{children}</strong>
-                  ),
-                  a: ({ children, href, ...props }) => (
-                    <a
-                      href={href}
-                      className="text-purple-600 hover:text-purple-800 underline transition-colors break-words"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      {...props}
-                    >
-                      {children}
-                    </a>
-                  ),
+                  strong: ({ children, ...props }) => {
+                    // Check if this strong element is part of contact information
+                    const isContactInfo = children && (
+                      children.toString().includes('Email:') || 
+                      children.toString().includes('Magpieweb') ||
+                      children.toString().includes('Website:') ||
+                      children.toString().includes('Phone:')
+                    );
+
+                    return (
+                      <strong className={`font-semibold text-gray-900 ${
+                        isContactInfo ? 'text-sm sm:text-sm lg:text-sm' : ''
+                      }`} {...props}>{children}</strong>
+                    );
+                  },
+                  a: ({ children, href, ...props }) => {
+                    // Check if this link is part of contact information
+                    const isContactInfo = href && (
+                      href.includes('info@magpieweb.com') || 
+                      href.includes('www.magpieweb.com') || 
+                      href.includes('+91')
+                    );
+
+                    return (
+                      <a
+                        href={href}
+                        className={`text-purple-600 hover:text-purple-800 underline transition-colors break-words ${
+                          isContactInfo ? 'text-sm sm:text-sm lg:text-sm' : ''
+                        }`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        {...props}
+                      >
+                        {children}
+                      </a>
+                    );
+                  },
                   hr: ({ ...props }) => (
                     <hr className="my-6 sm:my-8 border-gray-200 print:my-4" {...props} />
                   ),
