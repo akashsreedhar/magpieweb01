@@ -1,4 +1,10 @@
 {
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
   "redirects": [
     {
       "source": "/:path*",
@@ -7,6 +13,17 @@
         { "type": "host", "value": "www.magpieweb.com" }
       ],
       "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/legal/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     }
   ]
 }
