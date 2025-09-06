@@ -322,14 +322,8 @@ For questions, complaints, or support:
 **Magpieweb**
 Email: **[info@magpieweb.com](mailto:info@magpieweb.com)**
 Website: [www.magpieweb.com](https://www.magpieweb.com)
-                <h2 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 sm:mb-4 flex items-center gap-2" aria-label="Table of Contents"><Sparkles className="w-4 h-4 text-purple-500" /><span>Table of Contents</span></h2>
-                <div className="mb-3 relative">
-                  <Search className="w-4 h-4 text-purple-400 absolute left-3 top-2.5" />
-                  <input
-                    id="toc-search"
-                    placeholder="Search sections (s)"
-                    value={tocQuery}
-                    onChange={e => setTocQuery(e.target.value)}---`;
+
+---`;
 
 interface TOCItem { id: string; title: string; level: number; }
 
