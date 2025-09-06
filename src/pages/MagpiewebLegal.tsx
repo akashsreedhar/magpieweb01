@@ -196,7 +196,7 @@ For privacy concerns or general queries:
 **Magpieweb**
 Email: **[info@magpieweb.com](mailto:info@magpieweb.com)**
 Website: [www.magpieweb.com](https://www.magpieweb.com)
-
+phone :+91 73069 63417
 ---
 
 # 📜 Terms & Conditions – Magpieweb
@@ -322,7 +322,7 @@ For questions, complaints, or support:
 **Magpieweb**
 Email: **[info@magpieweb.com](mailto:info@magpieweb.com)**
 Website: [www.magpieweb.com](https://www.magpieweb.com)
-
+phone :+91 73069 63417
 ---`;
 
 interface TOCItem { id: string; title: string; level: number; }
