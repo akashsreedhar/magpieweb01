@@ -70,6 +70,12 @@ const Footer: React.FC = () => {
                 </a>
               </div>
               <div className="flex items-center space-x-2">
+                <Linkedin className="w-6 h-6 text-gray-400" />
+                <a href="https://www.linkedin.com/company/magpie-web" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400 transition-colors">
+                  LinkedIn
+                </a>
+              </div>
+              <div className="flex items-center space-x-2">
     <Phone className="w-6 h-6 text-gray-400" />
     <a href="tel:+917306963417" className="text-gray-400 hover:text-purple-400 transition-colors">
       +91 73069 63417
