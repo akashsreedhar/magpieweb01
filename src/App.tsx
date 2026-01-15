@@ -303,17 +303,12 @@ function App() {
                     {/* Card Content */}
                     <div className="relative bg-gradient-to-br from-gray-900 via-gray-800/95 to-black rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 lg:p-10 backdrop-blur-xl border border-emerald-500/20 overflow-hidden">
                       {/* Coming Soon Badge */}
-                      <motion.div 
-                        initial={{ x: -100, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.3, type: "spring" }}
-                        className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-6 md:right-6 px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 bg-gradient-to-r from-emerald-500/20 to-lime-500/20 border border-emerald-400/50 rounded-full backdrop-blur-sm"
-                      >
+                      <div className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-6 md:right-6 px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 bg-gradient-to-r from-emerald-500/20 to-lime-500/20 border border-emerald-400/50 rounded-full backdrop-blur-sm">
                         <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest text-emerald-300 flex items-center gap-1.5 sm:gap-2">
                           <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-emerald-400 rounded-full animate-ping" />
                           Coming Soon
                         </span>
-                      </motion.div>
+                      </div>
                       
                       {/* Logo & Branding */}
                       <div className="mb-5 sm:mb-6 md:mb-8">
@@ -364,16 +359,16 @@ function App() {
                 
                 {/* Right: Product Details */}
                 <motion.div
-                  initial={{ opacity: 0, x: 100 }}
+                  initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
                   className="space-y-5 sm:space-y-6 md:space-y-8"
                 >
                   <div>
                     <motion.p 
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
-                      transition={{ delay: 0.3 }}
+                      transition={{ delay: 0.2 }}
                       className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed mb-3 sm:mb-4 md:mb-6"
                     >
                       Stop losing customers to scattered notes and forgotten follow-ups. 
@@ -454,16 +449,16 @@ function App() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-20 items-center">
                 {/* Left: Product Details (Reversed Order) */}
                 <motion.div
-                  initial={{ opacity: 0, x: -100 }}
+                  initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
                   className="space-y-5 sm:space-y-6 md:space-y-8 order-2 lg:order-1"
                 >
                   <div>
                     <motion.p 
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
-                      transition={{ delay: 0.3 }}
+                      transition={{ delay: 0.2 }}
                       className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed mb-3 sm:mb-4 md:mb-6"
                     >
                       Turn WhatsApp into your complete storefront. 
@@ -534,9 +529,9 @@ function App() {
                 
                 {/* Right: 3D Product Visual */}
                 <motion.div
-                  initial={{ opacity: 0, x: 100, rotateY: 15 }}
-                  whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
-                  transition={{ duration: 1, type: "spring", bounce: 0.3 }}
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
                   className="relative perspective-1000 order-1 lg:order-2"
                 >
                   <div 
@@ -551,17 +546,12 @@ function App() {
                     {/* Card Content */}
                     <div className="relative bg-gradient-to-br from-gray-900 via-gray-800/95 to-black rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 lg:p-10 backdrop-blur-xl border border-purple-500/20 overflow-hidden">
                       {/* Live Badge */}
-                      <motion.div 
-                        initial={{ x: 100, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.3, type: "spring" }}
-                        className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-6 md:right-6 px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-400/50 rounded-full backdrop-blur-sm"
-                      >
+                      <div className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-6 md:right-6 px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-400/50 rounded-full backdrop-blur-sm">
                         <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest text-green-300 flex items-center gap-1.5 sm:gap-2">
                           <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full animate-pulse" />
                           Live
                         </span>
-                      </motion.div>
+                      </div>
                       
                       {/* Logo & Branding */}
                       <div className="mb-5 sm:mb-6 md:mb-8">
@@ -591,9 +581,9 @@ function App() {
                       {/* Stats Grid */}
                       <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 mt-5 sm:mt-6 md:mt-8">
                         {[
-                          { label: 'Active Stores', value: '50+', icon: '🏪' },
-                          { label: 'Orders/Month', value: '10K+', icon: '📦' },
-                          { label: 'Uptime', value: '99.9%', icon: '⚡' },
+                          { label: 'API Response', value: '<200ms', icon: '⚡' },
+                          { label: 'Uptime', value: '99.9%', icon: '✅' },
+                          { label: 'Daily Messages', value: '5K+', icon: '💬' },
                         ].map((stat, idx) => (
                           <motion.div
                             key={idx}
@@ -630,9 +620,9 @@ function App() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-20 items-center">
                 {/* Left: 3D Product Visual */}
                 <motion.div
-                  initial={{ opacity: 0, x: -100, rotateY: -15 }}
-                  whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
-                  transition={{ duration: 1, type: "spring", bounce: 0.3 }}
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
                   className="relative perspective-1000"
                 >
                   <div 
@@ -647,17 +637,12 @@ function App() {
                     {/* Card Content */}
                     <div className="relative bg-gradient-to-br from-gray-900 via-gray-800/95 to-black rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 lg:p-10 backdrop-blur-xl border border-blue-500/20 overflow-hidden">
                       {/* Live Badge */}
-                      <motion.div 
-                        initial={{ x: -100, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.3, type: "spring" }}
-                        className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-6 md:right-6 px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-400/50 rounded-full backdrop-blur-sm"
-                      >
+                      <div className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-6 md:right-6 px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-400/50 rounded-full backdrop-blur-sm">
                         <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest text-green-300 flex items-center gap-1.5 sm:gap-2">
                           <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full animate-pulse" />
                           Live
                         </span>
-                      </motion.div>
+                      </div>
                       
                       {/* Logo & Branding */}
                       <div className="mb-5 sm:mb-6 md:mb-8">
@@ -710,16 +695,16 @@ function App() {
                 
                 {/* Right: Product Details */}
                 <motion.div
-                  initial={{ opacity: 0, x: 100 }}
+                  initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
                   className="space-y-5 sm:space-y-6 md:space-y-8"
                 >
                   <div>
                     <motion.p 
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
-                      transition={{ delay: 0.3 }}
+                      transition={{ delay: 0.2 }}
                       className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed mb-3 sm:mb-4 md:mb-6"
                     >
                       Skip the grind. Land the role.
@@ -1203,8 +1188,8 @@ function App() {
           >
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {[
-                { label: 'Community Members', value: '500+', icon: Users },
-                { label: 'Products Built', value: '2', icon: Package },
+                { label: 'Community Members', value: '100+', icon: Users },
+                { label: 'Active Contributors', value: '50+', icon: Star },
                 { label: 'Features Voted', value: '150+', icon: TrendingUp },
                 { label: 'Ideas Submitted', value: '80+', icon: Lightbulb }
               ].map((stat, idx) => (
