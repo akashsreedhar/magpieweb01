@@ -5,8 +5,9 @@ import { Menu, X } from 'lucide-react';
 interface NavbarProps {
   onNavigate: {
     about: () => void;
+    products: () => void;
     services: () => void;
-    expertise: () => void;
+    community: () => void;
     contact: () => void;
   };
 }
@@ -107,8 +108,9 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
           <div className="hidden md:flex space-x-8">
             {[
               { text: 'About', onClick: onNavigate.about },
+              { text: 'Products', onClick: onNavigate.products },
               { text: 'Services', onClick: onNavigate.services },
-              { text: 'Expertise', onClick: onNavigate.expertise },
+              { text: 'Community', onClick: onNavigate.community },
               { text: 'Contact', onClick: onNavigate.contact },
             ].map((item, index) => (
               <motion.button
@@ -143,8 +145,9 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
           <div className="flex flex-col space-y-4 pt-4">
             {[
               { text: 'About', onClick: () => { onNavigate.about(); setIsMobileMenuOpen(false); } },
+              { text: 'Products', onClick: () => { onNavigate.products(); setIsMobileMenuOpen(false); } },
               { text: 'Services', onClick: () => { onNavigate.services(); setIsMobileMenuOpen(false); } },
-              { text: 'Expertise', onClick: () => { onNavigate.expertise(); setIsMobileMenuOpen(false); } },
+              { text: 'Community', onClick: () => { onNavigate.community(); setIsMobileMenuOpen(false); } },
               { text: 'Contact', onClick: () => { onNavigate.contact(); setIsMobileMenuOpen(false); } },
             ].map((item, index) => (
               <motion.button

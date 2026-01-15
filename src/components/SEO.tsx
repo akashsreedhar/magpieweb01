@@ -10,9 +10,9 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = "Magpie Web - AI-Powered Digital Solutions | Web Development Kerala",
-  description = "Boost Your Business with Affordable AI-Powered Solutions. Born in Kerala, built for the world — Magpie Web crafts stunning websites and smart digital solutions that help your business grow fast, stand out online, and reach more people — All without breaking the bank.",
-  keywords = "magpie web, web development kerala, AI solutions, digital marketing, custom software development, cloud solutions, SEO optimization, IT consulting, kerala web designers",
+  title = "Magpie Web - Community-Driven Product Studio | SaaS Products & Custom Development",
+  description = "Building SaaS products WITH our community. Use our ready-made solutions (in2Kart, HirePlz) or get custom development. From Kerala to the world - innovative products, affordable services, global impact.",
+  keywords = "magpie web, saas products, product studio, community-driven, in2kart, hireplz, whatsapp commerce, recruitment platform, web development kerala, AI solutions, custom software development, cloud solutions, IT consulting",
   image = "https://res.cloudinary.com/duwyf99dl/image/upload/v1745598351/Magpie_Web_Fav_Icon-removebg-preview_nrrxw4.png",
   url = "https://magpieweb.com/",
   type = "website"
