@@ -414,20 +414,26 @@ function App() {
                     transition={{ delay: 0.5 }}
                     className="flex flex-col sm:flex-row items-center sm:items-start gap-2.5 sm:gap-3 md:gap-4 pt-2 sm:pt-3 md:pt-4"
                   >
-                    <motion.button
+                    <motion.a
+                      href="https://grownleaf.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-full sm:w-auto px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-gradient-to-r from-emerald-600 to-lime-600 rounded-xl sm:rounded-2xl text-white font-bold text-sm sm:text-base md:text-lg shadow-xl shadow-emerald-500/20 flex items-center justify-center gap-2 sm:gap-3 group"
                       whileHover={{ scale: 1.02, y: -2 }}
                       whileTap={{ scale: 0.98 }}
                     >
                       <span>Join Waitlist</span>
                       <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-                    </motion.button>
-                    <motion.button
+                    </motion.a>
+                    <motion.a
+                      href="https://grownleaf.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-full sm:w-auto px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-white/5 border border-emerald-500/30 rounded-xl sm:rounded-2xl text-emerald-300 font-semibold text-sm sm:text-base hover:bg-emerald-500/10 transition-all text-center"
                       whileHover={{ scale: 1.02 }}
                     >
                       Learn More
-                    </motion.button>
+                    </motion.a>
                   </motion.div>
                 </motion.div>
               </div>
